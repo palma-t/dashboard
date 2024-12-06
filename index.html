@@ -3,8 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <title>Dashboard</title>
 </head>
 <body>
     <div class="container">
@@ -14,15 +17,18 @@
                     <img src="" alt="Searching icon">
                 </div>
                 <div class="user">
-                    <img src="" alt="Ringing sign">
-                    <img src="" alt="User picture">
+                    <img src="icons/bell-ring.svg" alt="Ringing sign">
+                    <img src="icons/dog.svg" alt="User picture">
                     <div class="name">Morgan Oakley</div>
                 </div>
             </div>
             <div class="second-line">
                 <div class="welcome">
-                    <img src="" alt="User picture">
-                    <h2>Morgan Oakley (@morgan)</h2>
+                    <img src="icons/dog.svg" alt="User picture">
+                    <div>
+                        <p>Hi there,</p>
+                        <h2>Morgan Oakley (@morgan)</h2>
+                    </div>
                 </div>
                 <div class="nav">
                 <ul>
@@ -35,22 +41,22 @@
         </header>
         <div class="sidebar">
             <div class="logo">
-                <img src="" alt="Admin logo">
+                <img src="icons/view-dashboard.svg" alt="Admin logo">
                 <h1>Dashboard</h1>
             </div>
             <div class="menu">
-                <ul>
-                    <li>Home</li>
-                    <li>Profile</li>
-                    <li>Messages</li>
-                    <li>History</li>
-                    <li>Tasks</li>
-                    <li>Communities</li>
+                <ul class="menu1">
+                    <li><img src="icons/home.svg" alt="Home icon">Home</li>
+                    <li><img src="icons/account-box.svg" alt="Account icon">Profile</li>
+                    <li><img src="icons/message.svg" alt="Message icon">Messages</li>
+                    <li><img src="icons/history.svg" alt="Home icon">History</li>
+                    <li><img src="icons/check-circle.svg" alt="Checkbox icon">Tasks</li>
+                    <li><img src="icons/account-group.svg" alt="Group of people">Communities</li>
                 </ul>
-                <ul>
-                    <li>Settings</li>
-                    <li>Support</li>
-                    <li>Privacy</li>
+                <ul class="menu2">
+                    <li><img src="icons/cog-outline.svg" alt="Cog icon">Settings</li>
+                    <li><img src="icons/help.svg" alt="Question mark">Support</li>
+                    <li><img src="icons/security.svg" alt="Security icon">Privacy</li>
                 </ul>
             </div>
         </div>
@@ -102,41 +108,54 @@
             </div>
             <div class="annoucements">
                 <h3>Annoucements</h3>
-                <div>
-                    <div>Site Maintenance</div>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod 
-                    </p>
-                </div>
-                <div>
-                    <div>Site Maintenance</div>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod 
-                    </p>
-                </div>
-                <div>
-                    <div>Site Maintenance</div>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod 
-                    </p>
+                <div class="announcements-block">
+                    <div>
+                        <div class="ann-title">Site Maintenance</div>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                        </p>
+                    </div>
+                    <div>
+                        <div class="ann-title">Site Maintenance</div>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                        </p>
+                    </div>
+                    <div>
+                        <div class="ann-title">Site Maintenance</div>
+                        <p class="last-ann">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                        </p>
+                    </div>
                 </div>
             </div>
             <div class="trending">
                 <h3>Trending</h3>
                 <div class="tag">
-                    <img src="" alt="User picture">
                     <div>
-                        <span>@tegan</span>
-                        <p class="tagline">World Peace Builder</p>
+                        <img src="icons/dog.svg" alt="User picture">
+                        <div class="trending-text">
+                            <span class="trending-title">@tegan</span>
+                            <p class="tagline">World Peace Builder</p>
+                        </div>
                     </div>
                     <div>
-                        <span>@morgan</span>
-                        <p class="tagline">Super Cool Project</p>
+                        <img src="icons/dog.svg" alt="User picture">
+                        <div class="trending-text">
+                            <span class="trending-title">@morgan</span>
+                            <p class="tagline">Super Cool Project</p>
+                        </div>
                     </div>
                     <div>
-                        <span>@kendall</span>
-                        <p class="tagline">Life Changing App</p>
+                        <img src="icons/dog.svg" alt="User picture">
+                        <div class="trending-text">
+                            <span class="trending-title">@egan</span>
+                            <p class="tagline">Life Changing App</p>
+                        </div>
                     </div>
                     <div>
-                        <span>@alex</span>
-                        <p class="tagline">No Traffic Maker</p>
+                        <img src="icons/dog.svg" alt="User picture">
+                        <div class="trending-text">
+                            <span class="trending-title">@megan</span>
+                            <p class="tagline">No Traffic Maker</p>
+                        </div>
                     </div>
                 </div>
             </div>
