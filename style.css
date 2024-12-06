@@ -138,6 +138,7 @@ h1 {
 
 .nav li {
     background-color: rgb(91, 91, 223);
+    border: 1px solid rgb(91, 91, 223);
     color: white;
     text-align: center;
     border-radius: 15px;
@@ -153,7 +154,7 @@ h1 {
 
 .content {
     display: grid;
-    grid: 1fr 1fr / 2fr 1fr;
+    grid-template-columns: 2.7fr 1.3fr;
     background-color: rgb(217, 235, 252);
 }
 
@@ -162,42 +163,54 @@ h1 {
     grid-row: 1/3;
 
     display: grid;
-    grid-template-rows: 0.3fr 3fr;
-    grid-auto-rows: 3fr;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
-
+    grid-template-rows: 0.3fr 5fr;
     padding: 20px;
 }
 
-.projects h3 {
-    grid-column: 1/3;
-    padding-top: 10px;
-    padding-left: 10px;
+.right-sidebar {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
 }
 
-.annoucements {
-    grid-column: 2/3;
+.projects h3 {
+    grid-row: 1/2;
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-bottom: 20px;
+}
+
+.articles {
+    grid-row: 2/3;
+
+    display: grid;
+    grid-template-rows: max(210px, 1fr) max(210px, 1fr) max(210px, 1fr);
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.announcements {
     grid-row: 1/2;
     padding: 20px;
     padding-right: 30px;
 }
 
 .trending {
-    grid-column: 2/3;
     grid-row: 2/3;
     padding: 20px;
     padding-right: 30px;
 }
 
-.annoucements h3, .trending h3 {
+.announcements h3, .trending h3 {
     padding: 10px;
     padding-bottom: 20px;
 }
 
 .card {
+    max-width: 450px;
+    max-height: 250px;
+    padding: 25px;
+
     background-color: white;
-    padding: 20px;
     border-left: 5px solid orange;
     box-shadow: 2px 2px 10px rgb(201, 200, 200);
     border-radius: 15px;
@@ -208,6 +221,25 @@ h4 {
     font-size: 1.05rem;
 }
 
+.project-options {
+    justify-self: flex-end;
+    align-self: flex-end;
+    margin-top: 20px;
+    
+}
+
+.card img {
+    width: 25px;
+    margin-left: 10px;
+}
+
+.card img:hover {
+    width: 25px;
+    margin-left: 10px;
+    opacity: .5;
+    cursor: pointer;
+}
+
 .card p {
     font-weight: 300;
     font-size: 0.9rem;
@@ -215,7 +247,7 @@ h4 {
 
 .announcements-block {
     background-color: white;
-    padding: 20px;
+    padding: 25px;
     box-shadow: 2px 2px 10px rgb(201, 200, 200);
     border-radius: 15px;
 }
@@ -223,39 +255,42 @@ h4 {
 .ann-title {
     padding-bottom: 5px;
     font-size: 1rem;
+    font-weight: 600;
 }
 
-.annoucements p {
+.announcements p {
     font-weight: 300;
     font-size: 0.85rem;
     padding-bottom: 10px;
-    border-bottom: 0.5px solid rgb(56, 56, 56);
+    border-bottom: 0.2px solid rgb(112, 112, 112);
     margin-bottom: 10px;
 }
 
-.annoucements:last-child p { /* ne s'applique pas - problème de spécificité ? */
-    border: none;
+.last-ann p {
+    border-bottom: none;
     padding-bottom: 0px;
+    margin-bottom: 0px;
 }
 
 .tag-block {
     background-color: white;
-    padding: 25px;
+    padding: 15px;
     box-shadow: 2px 2px 10px rgb(201, 200, 200);
     border-radius: 15px;
-    padding: 20px;
 }
 
 .tags {
     display: grid;
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: 1fr 3fr;
     gap: 10px;
+    align-items: center;
    
-    margin-bottom: 10px;;
+    margin-bottom: 10px;
+    margin-top: 10px;
 }
 
 .trending img {
-    width: 50px;
+    width: min(8vw, 35px);
     grid-column: 1/2;
     justify-self: center;
 }
@@ -267,7 +302,7 @@ h4 {
 .trending-title {
     font-weight: 600;
     font-size: 1rem;
-    padding-bottom: 5px;
+    margin-bottom: 5px;
 }
 
 .tagline {
