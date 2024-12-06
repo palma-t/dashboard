@@ -77,6 +77,11 @@ h1 {
     width: 30px;
 }
 
+.first-line img:hover {
+    opacity: .5;
+    cursor: pointer;
+}
+
 .searching {
     padding: 10px;
     display: flex;
@@ -92,12 +97,30 @@ h1 {
     width: max(100px, 60%);
 }
 
+.first-line input:focus {
+    border: 1px solid rgb(91, 91, 223);
+    outline: none;
+}
+
 .user {
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
+    padding-right: 20px;
     gap: 20px;
+
     font-weight: 500;
+}
+
+.user-picture {
+    background-color: rgb(91, 91, 223);
+    border-radius: 30px;
+    padding: 5px;
+}
+
+.user:hover {
+    color: rgb(91, 91, 223);
+    cursor: pointer;
 }
 
 .second-line {
@@ -211,7 +234,7 @@ h1 {
     padding: 25px;
 
     background-color: white;
-    border-left: 5px solid orange;
+    border-left: 5px solid rgb(255, 115, 0);
     box-shadow: 2px 2px 10px rgb(201, 200, 200);
     border-radius: 15px;
 }
@@ -262,7 +285,7 @@ h4 {
     font-weight: 300;
     font-size: 0.85rem;
     padding-bottom: 10px;
-    border-bottom: 0.2px solid rgb(112, 112, 112);
+    border-bottom: 0.2px solid rgb(255, 115, 0);
     margin-bottom: 10px;
 }
 
@@ -282,7 +305,7 @@ h4 {
 .tags {
     display: grid;
     grid-template-columns: 1fr 3fr;
-    gap: 10px;
+    gap: 15px;
     align-items: center;
    
     margin-bottom: 10px;
@@ -290,9 +313,9 @@ h4 {
 }
 
 .trending img {
-    width: min(8vw, 35px);
+    width: min(8vw, 40px);
     grid-column: 1/2;
-    justify-self: center;
+    justify-self: flex-end;
 }
 
 .trending-text {
