@@ -251,14 +251,17 @@ h4 {
     
 }
 
+.card:hover {
+    background-color: rgba(240, 240, 240, 0.658);
+    cursor: pointer;
+}
+
 .card img {
     width: 25px;
     margin-left: 10px;
 }
 
 .card img:hover {
-    width: 25px;
-    margin-left: 10px;
     opacity: .5;
     cursor: pointer;
 }
@@ -300,6 +303,9 @@ h4 {
     padding: 15px;
     box-shadow: 2px 2px 10px rgb(201, 200, 200);
     border-radius: 15px;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));;
 }
 
 .tags {
